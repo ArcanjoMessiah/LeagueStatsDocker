@@ -27,7 +27,10 @@ services:
     restart: always
   api:
     container_name: leaguestats-web
-    command: ./wait-for-it.sh leaguestats-postgres:5432 -- ./wait-for-it.sh leaguestats-redis:6379 -- sleep 20 -- node ace migration:run --force -- dumb-init node ace serve --watch --encore-args="--host ${HOST} --port 8080"
+    command: ./wait-for-it.sh leaguestats-postgres:5432 -- ./wait-for-it.sh leaguestats-redis:6379 -- node ace migration:run && npm start
+    depends_on:
+      - leaguestats-redis
+      - leaguestats-postgres
     networks:
       - leaguestats-network
     links:

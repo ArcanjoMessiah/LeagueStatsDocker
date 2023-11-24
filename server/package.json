@@ -3,9 +3,10 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
+    "migrate": "echo Y | node --harmony_proxies ace  migration:run",
     "dev": "node ace serve --watch",
     "build": "node ace build --production",
-    "start": "node build/server.js",
+    "start": "node ace serve --watch --encore-args=\"--host ${HOST} --port 8080\"",
     "lint": "eslint . --ext=.ts",
     "format": "prettier --write ."
   },

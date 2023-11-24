@@ -1,8 +1,8 @@
-FROM node:16-buster-slim AS web
+FROM node:18-buster-slim AS web
 
-WORKDIR /usr/src/app
+WORKDIR /var/www
 
-COPY server/ .
+COPY /server .
 
 RUN npm i -g @adonisjs/cli && \
     npm install && \
@@ -11,5 +11,3 @@ RUN npm i -g @adonisjs/cli && \
 RUN chmod +x ./wait-for-it.sh
 
 EXPOSE 3333
-
-ENTRYPOINT ["node","ace","serve","--watch", "true"]

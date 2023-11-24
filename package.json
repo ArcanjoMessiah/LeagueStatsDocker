@@ -1,0 +1,12 @@
+{
+  "name": "leaguestatsdocker",
+  "version": "1.0.0",
+  "description": "[![Netlify Status](https://api.netlify.com/api/v1/badges/caa8be10-e095-4934-81ef-b662fb73483f/deploy-status)](https://app.netlify.com/sites/leaguestats-gg/deploys) <a href=\"https://discord.gg/RjBzjfk\"><img src=\"https://img.shields.io/badge/Discord-join%20chat-738bd7.svg\" alt=\"LeagueStats.gg official Discord\"></a>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
